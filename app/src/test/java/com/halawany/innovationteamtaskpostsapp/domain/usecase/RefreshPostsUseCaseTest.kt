@@ -5,8 +5,6 @@ import com.halawany.innovationteamtaskpostsapp.core.UiState
 import com.halawany.innovationteamtaskpostsapp.core.data.DataState
 import com.halawany.innovationteamtaskpostsapp.core.data.ErrorState
 import com.halawany.innovationteamtaskpostsapp.core.network.NetworkMonitor
-import com.halawany.innovationteamtaskpostsapp.data.remote.PostApiService
-import com.halawany.innovationteamtaskpostsapp.domain.model.Post
 import com.halawany.innovationteamtaskpostsapp.domain.repository.PostRepository
 import io.mockk.coEvery
 import io.mockk.mockk
