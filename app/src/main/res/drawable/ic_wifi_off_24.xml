@@ -1,0 +1,4 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="24dp" android:height="24dp" android:viewportWidth="24" android:viewportHeight="24">
+  <path android:fillColor="#FFFFFFFF" android:pathData="M23,1.01L10.36,13.65l6.49,3.770L23,1.01zM1.01,2.02l2.54,2.54 0.05,0.05 4.79,4.79 0.05,0.05 13.56,13.56 1.41,-1.41 -2.71,-2.71 -2.71,-2.71L4.41,2.57 2.41,0.59 1.01,2.02zM12.98,9.75L15.53,7.2C13.56,5.23 7.82,2.39 1.0,11.0l2.0,3.46 C8.45,5.88 11.92,8.69 12.98,9.75z"/>
+</vector>
+<!-- Simplified Wifi off path -->

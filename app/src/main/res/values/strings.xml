@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">innovationTeamTask(Posts app)</string>
+
+
+    <string name="error_no_internet">No internet connection</string>
+    <string name="error_timeout">Request timed out. Please try again.</string>
+    <string name="error_connection_failed">Unable to connect to server</string>
+    <string name="error_ssl">Secure connection failed</string>
+
+    <string name="error_http_generic">Server error (%1$d)</string>
+    <string name="error_unauthorized">Session expired. Please login again.</string>
+    <string name="error_forbidden">You don’t have permission to perform this action.</string>
+    <string name="error_not_found">Requested resource not found.</string>
+    <string name="error_conflict">Request conflict. Please retry.</string>
+    <string name="error_server">Server is unavailable. Try later.</string>
+
+    <string name="error_parsing">Unexpected response from server</string>
+
+    <string name="error_db_constraint">Data already exists</string>
+    <string name="error_db_disk_full">Storage is full</string>
+    <string name="error_db_corrupt">Local data corrupted</string>
+    <string name="error_db_generic">Database error occurred</string>
+
+    <string name="error_unknown">Something went wrong</string>
+    <string name="error_post_not_found">Post Not found</string>
+</resources>
