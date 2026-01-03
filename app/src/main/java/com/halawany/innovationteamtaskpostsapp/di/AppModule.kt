@@ -57,7 +57,7 @@ private fun authenticationInterceptor(): (Interceptor.Chain) -> Response = { cha
             .newBuilder()
             .addHeader(
                 "x-rapidapi-key",
-                "c9ad1973cfmsh551a25db61acd9ap16ef38jsn45c817d30aee"
+                "e2da6100f8msh4d91ae6fe8645a2p1a34e6jsn5934293ab1c8"
             )
 
             .addHeader(

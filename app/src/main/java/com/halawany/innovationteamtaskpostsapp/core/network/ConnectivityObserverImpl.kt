@@ -14,18 +14,26 @@ import javax.inject.Inject
 
 class ConnectivityObserverImpl @Inject constructor(
     @ApplicationContext context: Context,
+   val networkMonitor: NetworkMonitor
 ) : ConnectivityObserver {
 
     private val connectivityManager =
         context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
 
     override fun observe(): Flow<ConnectivityObserver.Status> {
+
+
+
         return callbackFlow {
+            if( !networkMonitor.isConnected()){
+                launch { send(ConnectivityObserver.Status.Unavailable) }
+            }
+
             val callback = object : ConnectivityManager.NetworkCallback() {
                 override fun onAvailable(network: Network) {
                     super.onAvailable(network)
                     launch {
-                        delay(2000)
+                        delay(1000)
                         send(ConnectivityObserver.Status.Available)
                     }
                 }
@@ -44,6 +52,7 @@ class ConnectivityObserverImpl @Inject constructor(
                     super.onUnavailable()
                     launch { send(ConnectivityObserver.Status.Unavailable) }
                 }
+
             }
 
             // Register the callback

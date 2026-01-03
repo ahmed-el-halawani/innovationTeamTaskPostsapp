@@ -1,6 +1,7 @@
 package com.halawany.innovationteamtaskpostsapp.presentation.post.news
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,6 +22,8 @@ import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class ListFragment : Fragment() {
+    private val TAG = "ListFragment"
+
     private val binding: FragmentListBinding by lazy {
         FragmentListBinding.inflate(layoutInflater)
     }
@@ -61,25 +64,23 @@ class ListFragment : Fragment() {
             }
         }
 
-        viewLifecycleOwner.lifecycleScope.launch {
-            viewModel.syncDataFromNetworkState.collectLatest {
-                when (it) {
-                    is UiState.Error -> {
-                        binding.swipeRefresh.isRefreshing = false
-                        Toast.makeText(context, it.message.toLocalizedMessage(requireContext()), Toast.LENGTH_LONG).show()
-                        binding.pbSyncData.isVisible = false
-                        binding.ivSyncedCheck.isVisible = true
-                    }
+        viewModel.syncDataFromNetworkState.observe(requireActivity()) {
+            when (it) {
+                is UiState.Error -> {
+                    binding.swipeRefresh.isRefreshing = false
+                    Toast.makeText(context, it.message.toLocalizedMessage(requireContext()), Toast.LENGTH_LONG).show()
+                    binding.pbSyncData.isVisible = false
+                    binding.ivSyncedCheck.isVisible = true
+                }
 
-                    UiState.Loading -> {
-                        binding.pbSyncData.isVisible = true
-                        binding.ivSyncedCheck.isVisible = false
-                    };
-                    is UiState.Success<*>, UiState.Idle -> {
-                        binding.swipeRefresh.isRefreshing = false
-                        binding.pbSyncData.isVisible = false
-                        binding.ivSyncedCheck.isVisible = true
-                    }
+                UiState.Loading -> {
+                    binding.pbSyncData.isVisible = true
+                    binding.ivSyncedCheck.isVisible = false
+                };
+                is UiState.Success<*>, UiState.Idle -> {
+                    binding.swipeRefresh.isRefreshing = false
+                    binding.pbSyncData.isVisible = false
+                    binding.ivSyncedCheck.isVisible = true
                 }
             }
         }

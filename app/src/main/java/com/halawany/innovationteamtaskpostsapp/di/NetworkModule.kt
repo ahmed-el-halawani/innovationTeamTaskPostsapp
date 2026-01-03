@@ -20,6 +20,6 @@ object CoreModule {
 
     @Provides
     @Singleton
-    fun provideConnectivityObserver(impl: ConnectivityObserverImpl): ConnectivityObserver = impl
+    fun provideConnectivityObserver(impl: ConnectivityObserverImpl,networkMonitor: NetworkMonitor): ConnectivityObserver = impl
 
 }
