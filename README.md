@@ -1,6 +1,10 @@
-# Posts App 📱
+<img width="315" height="647" alt="image" src="https://github.com/user-attachments/assets/2a0a7ed2-f724-4054-b9b7-1dd17f7644f9" /># Posts App 📱
 
 A modern Android application demonstrating **Clean Architecture**, **MVVM**, and **Paging 3** with offline capabilities. This project serves as a showcase of best practices in Android development, including Dependency Injection (Hilt), Reactive Programming (Coroutines/Flow), and robust error handling.
+
+<a href="https://appetize.io/embed/b_kzbtomvexrmro4wf4cdnrk5lgu?autoplay=true">
+  <img src="docs/preview.png" width="250" alt="Click to run app" title="Click to run app directly in browser">
+</a>
 
 ## 🚀 Features
 
