@@ -2,7 +2,7 @@
 
 A modern Android application demonstrating **Clean Architecture**, **MVVM**, and **Paging 3** with offline capabilities. This project serves as a showcase of best practices in Android development, including Dependency Injection (Hilt), Reactive Programming (Coroutines/Flow), and robust error handling.
 
-[![Run in Browser](https://img.shields.io/badge/▶-Run%20Live%20Preview-000?style=for-the-badge&logo=google-play&logoColor=white)](https://appetize.io/embed/b_kzbtomvexrmro4wf4cdnrk5lgu?device=pixel4&scale=75&orientation=portrait&osVersion=11.0)
+[![Run in Browser](https://img.shields.io/badge/▶-Run%20Live%20Preview-000?style=for-the-badge&logo=google-play&logoColor=white)](https://appetize.io/embed/b_kzbtomvexrmro4wf4cdnrk5lgu?autoplay=true)
 
 <a href="https://appetize.io/embed/b_kzbtomvexrmro4wf4cdnrk5lgu?autoplay=true">
   <img src="https://github.com/user-attachments/assets/7424c364-94cd-4f6f-80ed-80cbe653a7ec" width="150" alt="Click to run app" title="Click to run app directly in browser">
